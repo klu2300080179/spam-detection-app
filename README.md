@@ -1,138 +1,125 @@
-📩 Spam Detection App (ML + NLP + Streamlit)
+📩 Spam Detection ML App (NLP + Streamlit)
 
-A machine learning web application that classifies SMS/email messages as Spam or Not Spam using TF-IDF and a Support Vector Machine (SVM) classifier.
-The project includes data preprocessing, model training, evaluation, and deployment on Streamlit Cloud.
+This is my simple Machine Learning project where I built a Spam Detection App using Python, NLP, and Streamlit.
+The model takes an SMS/email message as input and predicts whether it is Spam or Not Spam.
 
-🚀 Live Demo
+I learned a lot while doing this project like text preprocessing, TF-IDF vectorization, training ML models, saving models, and deploying a web application.
 
-🟢 View the live app here:
+🌐 Live App Link
+
+You can check the working app here:
+
 👉 https://spam-detection-app-beyhgafu59p6iuwe6zctbd.streamlit.app/
 
-📌 Project Overview
+📘 What This Project Does
 
-This project builds a complete end-to-end Machine Learning pipeline:
+Takes a message as input
 
-✔ Text preprocessing
-✔ Label encoding
-✔ TF-IDF vectorization
-✔ Training 5+ ML models
-✔ Selecting best model (SVM)
-✔ Saving model with pickle
-✔ Developing a Streamlit Web App
-✔ Deploying online
+Converts it into numerical format using TF-IDF
 
-The app allows users to enter any message and instantly get a prediction whether it is Spam or Not Spam.
+Predicts whether the message is Spam (1) or Ham/Not Spam (0)
 
-🧠 Machine Learning Models Used
+Shows the result on a clean Streamlit UI
 
-The following ML models were trained and evaluated:
+The whole app is deployed online
+
+🧠 Machine Learning Models I Tried
+
+I trained many models and compared their accuracy:
 
 Model	Accuracy
 Logistic Regression	94%
 Naive Bayes	96.8%
 Decision Tree	96.8%
-Random Forest	97.7%
-SVM (Selected)	97.5%
+Random Forest	97.6%
+SVM (Final Model)	97.5%
 
-👉 SVM showed the best balance of accuracy, precision, recall, and F1-score — especially for identifying spam — so it was chosen for deployment.
+I selected SVM because it gave the best balance of precision, recall, and F1-score, especially for detecting spam.
 
-🛠️ Technologies Used
-Machine Learning
+🛠️ Technologies I Used
+Machine Learning & NLP
 
-Scikit-learn
+Python
 
-SVM (Support Vector Machine)
+TF-IDF Vectorizer
 
-TF-IDF vectorization
+SVM Classifier
 
-NLP (Text Processing)
+Scikit-Learn
 
-Tokenization
-
-Cleaning
-
-Removing stopwords
-
-Feature extraction (TF-IDF)
-
-Deployment
+App & Deployment
 
 Streamlit
 
 Streamlit Cloud
 
-Pickle (model persistence)
+Joblib (for saving models)
 
-Development Tools
-
-Python
+Tools
 
 Google Colab
 
+VS Code
+
 GitHub
 
-📂 Project Structure
+📁 Project Files
 spam-detection-app/
 │
-├── app.py                      # Streamlit application
-├── best_svm_model.pkl          # Trained SVM model
-├── tfidf_vectorizer.pkl        # TF-IDF transformer
-├── requirements.txt            # Required Python packages
-└── README.md                   # Project documentation
+├── app.py                  # Streamlit UI code
+├── best_svm_model.pkl      # Saved SVM model
+├── tfidf_vectorizer.pkl    # Saved TF-IDF transformer
+├── requirements.txt        # Libraries needed to run the app
+└── README.md               # Documentation
 
-⚙️ How to Run Locally
-1️⃣ Clone the repository:
+▶️ How to Run This Project Locally
+1. Clone the repository:
 git clone https://github.com/klu2300080179/spam-detection-app.git
 cd spam-detection-app
 
-2️⃣ Install dependencies:
+2. Install libraries:
 pip install -r requirements.txt
 
-3️⃣ Run the Streamlit app:
+3. Run the app:
 streamlit run app.py
 
 
-The app will open at:
+The app will open on:
 
 http://localhost:8501
 
-📊 Model Evaluation (SVM)
-Metric	Ham (0)	Spam (1)
-Precision	0.98	0.97
-Recall	1.00	0.84
-F1-score	0.99	0.90
+📊 Model Performance (SVM)
 
-SVM gave the best recall for spam compared to other models.
+For the SVM model:
 
-🎨 Streamlit App Preview
-📩 Email Spam Detection App
-Enter a message below and the model will classify it as Spam or Not Spam.
+Precision (Spam): 0.97
 
+Recall (Spam): 0.84
 
-Input box → Predict button → Result displayed as ✔ “Not Spam” or 🚨 “Spam”.
+F1-score (Spam): 0.90
 
-🏁 Conclusion
+Overall Accuracy: 97.48%
 
-This project demonstrates:
+🎯 What I Learned from This Project
 
-Text classification using ML
+How to clean and preprocess text data
 
-Complete preprocessing & feature engineering
+How TF-IDF works
 
-Multi-model comparison
+How to train multiple ML models and compare them
 
-Streamlit UI development
+How to save and load ML models using pickle/joblib
 
-Deployment to a live production environment
+How to build a web app using Streamlit
 
-It’s a strong portfolio project for ML, NLP, and full-stack data science.
+How to deploy an app publicly
 
-👨‍💻 Author
+This was my first full end-to-end ML + Deployment project, and it helped me understand the complete workflow.
+
+👤 About Me
 
 Kadimetla Jagadeeshwar Reddy (2300080179)
-Undergraduate student at KL University
-Passionate about Machine Learning, AI, and full-stack development.
+Student at KL University
+Interested in Machine Learning, AI, and Full Stack Development.
 
-⭐ If you like this project
-
-Please star ⭐ the repository on GitHub!
+⭐ If you liked this project, please star the repo 😊
